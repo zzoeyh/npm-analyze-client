@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    /* Linting */
+    /* 严格检查选项 */
+    "strict": true, // 开启所有严格的类型检查
+    "alwaysStrict": true, // 在代码中注入'use strict'
+    "noImplicitAny": false, // 不允许隐式的any类型
+    "noImplicitThis": true, // 不允许this有隐式的any类型
+    "strictNullChecks": true, // 不允许把null、undefined赋值给其他类型的变量
+    "strictBindCallApply": true, // 严格的bind/call/apply检查
+    "strictFunctionTypes": true, // 不允许函数参数双向协变
+    "strictPropertyInitialization": true, // 类的实例属性必须初始化
+
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
