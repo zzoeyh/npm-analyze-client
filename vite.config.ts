@@ -16,16 +16,16 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
   ],
-  // server: {
-  //   port: 8080,
-  //   cors: true,
-  //   proxy: {
-  //     '/api': {
-  //       target: 'http://localhost:9999/',
-  //       ws: true,
-  //       changeOrigin: true,
-  //       rewrite: (path) => path.replace(/^\/api/, ''),
-  //     },
-  //   },
-  // },
+  server: {
+    port: 8080,
+    cors: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:9999/',
+        ws: true,
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 })

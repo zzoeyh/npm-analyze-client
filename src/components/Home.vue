@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import graph from './Graph.vue'
 import sidebar from './SideBar.vue'
+import ForceGraph from './ForceGraph.vue';
 import { ref } from 'vue'
 
 interface IMsg {
@@ -9,26 +9,37 @@ interface IMsg {
   children?: Array<any>
 }
 const sendMsg = ref<{}>()
+const sendNode = ref<{}>()
 const getMsg = (msg: IMsg) => {
   sendMsg.value = msg
   console.log(sendMsg.value)
+}
+
+const getNode = (node) => {
+  sendNode.value = node
+  console.log(sendNode.value)
 }
 </script>
 
 <template>
   <div id="home">
-    <sidebar :sendMsg="sendMsg"></sidebar>
-    <graph @msg="getMsg" />
-    <!-- <test @msg="getMsg" /> -->
+    <sidebar :sendMsg="sendMsg" :sendNode="sendNode"></sidebar>
+    <ForceGraph @msg="getMsg" @node="getNode" />
   </div>
 </template>
 
 <style scoped>
 #home {
-  background-color: #888;
+  background-color: #222;
   height: 100%;
+  color-scheme: dark
 }
+
 .read-the-docs {
   color: #888;
+}
+
+button {
+  position: absolute;
 }
 </style>

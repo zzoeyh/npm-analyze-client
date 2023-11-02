@@ -7,10 +7,10 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ElTree: typeof import('element-plus/es')['ElTree']
-    Graph: typeof import('./src/components/Graph.vue')['default']
+    ElTabPane: typeof import('element-plus/es')['ElTabPane']
+    ElTabs: typeof import('element-plus/es')['ElTabs']
+    ForceGraph: typeof import('./src/components/ForceGraph.vue')['default']
     Home: typeof import('./src/components/Home.vue')['default']
     SideBar: typeof import('./src/components/SideBar.vue')['default']
-    Test: typeof import('./src/components/Test.vue')['default']
   }
 }
