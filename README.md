@@ -9,4 +9,4 @@ Vue3+Vite+D3.js+Axios
 前端页面完成打包后放在服务端的public文件夹下，服务端使用命令行分析依赖包完成后自动打开页面，并使用了WebSocket实现了热更新。
 
 ## 预览
-![image](src/assets/preview.jpg)
+![image](preview.jpg)
